@@ -1,0 +1,16 @@
+diff -up sblim-cmpi-base-1.6.1/OSBase_UnixProcess.c.orig sblim-cmpi-base-1.6.1/OSBase_UnixProcess.c
+--- sblim-cmpi-base-1.6.1/OSBase_UnixProcess.c.orig	2009-07-25 02:37:30.000000000 +0200
++++ sblim-cmpi-base-1.6.1/OSBase_UnixProcess.c	2016-09-27 09:48:23.704660272 +0200
+@@ -223,9 +223,9 @@ static int _process_data( char * phd , s
+   strcat( cmd, "/stat");
+ 
+   if ( (fpstat=fopen(cmd,"r")) != NULL ) {
+-    fscanf(fpstat,"%*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s "
+-	   "%lld %lld %*s %*s %*s %*s %*s %ld", 
+-	   &umtime,&kmtime,&ctime );
++    fscanf(fpstat,"%*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s %*s "
++           "%lld %lld %*s %*s %*s %*s %*s %*s %ld",
++           &umtime,&kmtime,&ctime );
+     fclose(fpstat);
+     (*sptr)->kmtime = kmtime*10;
+     (*sptr)->umtime = umtime*10;

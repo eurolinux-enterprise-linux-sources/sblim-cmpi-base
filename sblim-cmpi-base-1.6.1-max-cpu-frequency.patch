@@ -1,0 +1,55 @@
+diff -up sblim-cmpi-base-1.6.1/OSBase_Processor.c.orig sblim-cmpi-base-1.6.1/OSBase_Processor.c
+--- sblim-cmpi-base-1.6.1/OSBase_Processor.c.orig	2010-12-21 03:44:41.000000000 +0100
++++ sblim-cmpi-base-1.6.1/OSBase_Processor.c	2016-09-27 09:47:08.804715147 +0200
+@@ -37,6 +37,7 @@ static unsigned short _processor_family(
+ static unsigned short _processor_load_perc( int );
+ 
+ char * CPUINFO = "/proc/cpuinfo";
++char * CPUMAXFREQ = "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq";
+ 
+ //char * CPUINFO = "/home/heidineu/local/sblim/cmpi-base-cpuinfo/x86_ibm_xSeries_2x";
+ //char * CPUINFO = "/home/heidineu/local/sblim/cmpi-base-cpuinfo/x86_ibm_xSeries_4x";
+@@ -247,6 +248,9 @@ static int _processor_data( int id, stru
+   int     count = 0;
+   int     lines = 0;
+   int     rc    = 0;
++  char *  maxcpufreq = NULL;
++  unsigned long maxMHz = 0;
++  FILE *fp;
+ 
+   _OSBASE_TRACE(4,("--- _processor_data() called"));
+ 
+@@ -346,6 +350,18 @@ static int _processor_data( int id, stru
+   strcpy(cmd, "cat ");
+   strcat(cmd, CPUINFO);
+ #if defined (INTEL) || defined (X86_64) || defined (IA64)
++  /* if /sys/devices/system/cpu/cpu(id]/cpufreq/cpuinfo_max_freq exists    */
++  /* then calculate MaxClockSpeed from there, otherwise the cpufreq module */
++  /* is not loaded, and /proc/cpuinfo always shows maximum speed           */
++  maxcpufreq = malloc((strlen(CPUMAXFREQ)+5));
++  sprintf(maxcpufreq, "/sys/devices/system/cpu/cpu%d/cpufreq/cpuinfo_max_freq", id);
++  if ((fp = fopen(maxcpufreq, "r")) > 0) {
++    if (1 == fscanf(fp, "%lu", &maxMHz)) {
++      maxMHz = maxMHz / 1000;
++      _OSBASE_TRACE(3,("--- _processor_data() maxMHz = %lu", maxMHz));
++    }
++    fclose(fp);
++  }
+   strcat(cmd, " | grep 'cpu MHz'");
+   rc = runcommand( cmd, NULL, &hdout, NULL );
+ #elif defined (S390) || defined (MIPS)
+@@ -380,9 +396,13 @@ static int _processor_data( int id, stru
+ #endif
+     ptr = ptr+1;
+     (*sptr)->curClockSpeed = atol(ptr);
+-    (*sptr)->maxClockSpeed = atol(ptr);
++    if (maxMHz > 0)
++       (*sptr)->maxClockSpeed = maxMHz;
++    else
++       (*sptr)->maxClockSpeed = atol(ptr);
+   }
+   freeresultbuf(hdout);
++  if (maxcpufreq) free(maxcpufreq);
+   if(cmd) free(cmd);
+ 
+   _OSBASE_TRACE(4,("--- _processor_data() exited"));

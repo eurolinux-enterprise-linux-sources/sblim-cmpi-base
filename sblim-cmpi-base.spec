@@ -3,13 +3,19 @@
 
 Name:           sblim-cmpi-base
 Version:        1.6.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        SBLIM CMPI Base Providers
 
 Group:          Applications/System
 License:        EPL
 URL:            http://sblim.wiki.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/sblim/%{name}-%{version}.tar.bz2
+# Patch0: already upstream, http://sourceforge.net/p/sblim/bugs/2634/
+Patch0:         sblim-cmpi-base-1.6.1-max-cpu-frequency.patch
+# Patch1: already upstream, http://sourceforge.net/p/sblim/bugs/2644/
+Patch1:         sblim-cmpi-base-1.6.1-wrong-UserModeTime-and-KernelModeTime.patch
+# Patch2: fix restart of sfcbd in provider-register script
+Patch2:         sblim-cmpi-base-1.6.1-provider-register-fix.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  tog-pegasus-devel >= %{tog_pegasus_version}
@@ -45,6 +51,9 @@ Testcase Files for the SBLIM Testsuite.
 
 %prep
 %setup -q
+%patch0 -p1 -b .max-cpu-frequency
+%patch1 -p1 -b .wrong-UserModeTime-and-KernelModeTime
+%patch2 -p1 -b .provider-register-fix
 
 %build
 %configure TESTSUITEDIR=%{_datadir}/sblim-testsuite \
@@ -123,6 +132,14 @@ fi
 %postun -p /sbin/ldconfig
 
 %changelog
+* Mon Oct 03 2016 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.6.1-2
+- Fix incorrect max cpu frequency
+  Resolves: #971053
+- Fix wrong UserModeTime and KernelModeTime
+  Resolves: #974071
+- Fix restart of scfbd service in provider-register script
+  Resolves: #1179878
+
 * Thu Jun 16 2011 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.6.1-1
 - Update to sblim-cmpi-base-1.6.1
   Resolves: #694514
