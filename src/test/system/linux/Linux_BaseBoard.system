@@ -1,0 +1,16 @@
+********************************************************************************
+class : Linux_BaseBoard
+
+--------------------------------------------------------------------------------
+Linux_BaseBoard : -eq 1
+
+--------------------------------------------------------------------------------
+CreationClassName : -eq Linux_BaseBoard
+Tag : -set
+
+Caption : -set
+Description : -set
+ElementName : -set
+
+SerialNumber : -set
+Manufacturer : -set

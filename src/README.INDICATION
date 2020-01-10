@@ -1,0 +1,87 @@
+/* ---------------------------------------------------------------------------*/
+(C) Copyright IBM Corp. 2005, 2009
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from
+http://www.opensource.org/licenses/eclipse-1.0.php
+
+Author:       Heidi Neumann <heidineu@de.ibm.com>
+Date  :	      01/03/2005
+
+Changes: 11/11/2008: added description to register indication sample with     
+                     SFCB
+         03/07/2005: added description to register Pegasus Simple Display
+                     consumer
+	      03/09/2005: added sample indication subscription for Pegasus to 
+			            test/indication directory
+	      06/01/2005: removed references to old build process.
+
+/* ---------------------------------------------------------------------------*/
+
+
+SBLIM CMPI Base Instrumentation README.INDICATION
+-------------------------------------------------
+
+The provider cmpiOSBase_OperatingSystemProvider also comes with Indication
+support now. To enable this, you need to do the following:
+
+- install the SBLIM package indication_helper. Please follow the instructions
+  in the package.
+- now build the cmpi-base package as described in the README
+
+
+Indication Sample 
+-----------------
+
+A sample indication subscription can be found under test/indication. Based on
+your CIMOM follow the appropriate instructions.
+
+OpenPegasus
+-----------
+
+You need to register the Pegasus Simple Display consumer. The registration 
+command and mof is:
+
+> cimmofl -nroot/PG_InterOp $PEGASUS_ROOT/src/Providers/sample/Load/SimpleDisplayConsumerR.mof
+
+The openPegasus SimpleDisplayConsumer writes received indications into the
+indicationLog file. You only need to set the PEGASUS_DISPLAYCONSUMER_DIR 
+environment variable by:
+
+> export PEGASUS_DISPLAYCONSUMER_DIR=<path>
+
+Then load the sample filter, handler and subscription by:
+
+> wbemexec PegasusCreateFilter.localhost.xml
+> wbemexec PegasusCreateHandler.localhost.xml
+> wbemexec PegasusCreateSubscription.localhost.xml
+
+Unload via the following order:
+
+> wbemexec PegasusDeleteSubscription.localhost.xml
+> wbemexec PegasusDeleteHandler.localhost.xml
+> wbemexec PegasusDeleteFilter.localhost.xml
+
+(SFCB)
+------
+
+SFCB allows indications to be delivered directly to a text file. You simply need
+to load the sample filter, handler, and subscription by:
+
+> wbemcat SFCBCreateFilter.localhost.xml
+> wbemcat SFCBCreateHandler.localhost.xml
+> wbemcat SFCBCreateSubscription.localhost.xml
+
+By default the sample handler sets "/tmp/SFCB_OS_Listener.txt" as the file to
+deliver indications. You can changes this destination by editing the "Destination"
+property in the handler creation XML.
+
+Unload via the following order:
+
+> wbemcat SFCBDeleteSubscription.localhost.xml
+> wbemcat SFCBDeleteHandler.localhost.xml
+> wbemcat SFCBDeleteFilter.localhost.xml
+

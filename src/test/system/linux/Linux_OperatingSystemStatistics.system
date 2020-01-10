@@ -1,0 +1,6 @@
+********************************************************************************
+association : Linux_OperatingSystemStatistics
+
+--------------------------------------------------------------------------------
+Linux_OperatingSystem : -target Linux_OperatingSystemStatisticalData -eq 1
+Linux_OperatingSystemStatisticalData : -target Linux_OperatingSystem -eq 1

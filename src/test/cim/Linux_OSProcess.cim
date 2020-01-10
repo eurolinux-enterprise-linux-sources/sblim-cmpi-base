@@ -1,0 +1,33 @@
+********************************************************************************
+association : Linux_RunningOS
+objectPath : Linux_OSProcess.GroupComponent="Linux_OperatingSystem.CSCreationClassName=Linux_ComputerSystem,CSName=testsystem,CreationClassName=Linux_OperatingSystem,Name=testsystem",PartComponent="Linux_UnixProcess.CSCreationClassName=Linux_ComputerSystem,CSName=testsystem,OSCreationClassName=Linux_OperatingSystem,OSName=testsystem,CreationClassName=Linux_UnixProcess,Handle=1"
+sourceRole : GroupComponent
+targetRole : PartComponent
+sourceClass : Linux_OperatingSystem
+targetClass : Linux_UnixProcess
+volatile
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references

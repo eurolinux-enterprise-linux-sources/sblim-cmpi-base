@@ -1,0 +1,6 @@
+********************************************************************************
+association : Linux_CSBaseBoard
+
+--------------------------------------------------------------------------------
+Linux_ComputerSystem : -target Linux_BaseBoard -eq 1
+Linux_BaseBoard : -target Linux_ComputerSystem -eq 1

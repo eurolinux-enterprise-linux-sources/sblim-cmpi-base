@@ -1,0 +1,27 @@
+********************************************************************************
+class : Linux_OperatingSystem
+
+--------------------------------------------------------------------------------
+Linux_OperatingSystem : -eq 1
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq -file ComputerSystem.keys[0]
+CSName : -eq -file ComputerSystem.keys[1]
+CreationClassName : -eq -file OperatingSystem.keys[0]
+Name : -eq -file OperatingSystem.keys[1]
+
+Caption : -set
+Description : -set
+ElementName : -eq -cmd Linux_OperatingSystem.version.sh
+
+EnabledState : -eq 2
+OtherEnabledState : -empty
+RequestedState : -eq 2
+EnabledDefault : -eq 2
+Status : -empty
+OperationalStatus : -set
+
+OSType : -eq 36
+Version : -eq -cmd Linux_OperatingSystem.version.sh
+
+Distributed : -eq false

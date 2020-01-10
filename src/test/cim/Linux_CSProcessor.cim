@@ -1,0 +1,33 @@
+********************************************************************************
+association : Linux_CSProcessor
+objectPath : Linux_CSProcessor.GroupComponent="Linux_ComputerSystem.CreationClassName=Linux_ComputerSystem,Name=testsystem",PartComponent="Linux_Processor.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_Processor,DeviceID=5"
+sourceRole : GroupComponent
+targetRole : PartComponent
+sourceClass : Linux_ComputerSystem
+targetClass : Linux_Processor
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+

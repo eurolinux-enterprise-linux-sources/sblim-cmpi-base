@@ -1,0 +1,87 @@
+Changes in Version 1.6.0
+========================
+
+Bugs Fixed:
+- 2795176 migrate provider licenses to EPL
+
+Changes in Version 1.5.9
+========================
+
+Bugs Fixed:
+- 2508592 add CMPIStatus to indication function return
+- 2634178 Versioned libcmpiOSBase_OperatingSystemProvider
+
+Changes in Version 1.5.8
+========================
+
+Bugs Fixed:
+- 1203827 Updated cmpi-base README.INDICATION for sfcb support
+- 2308219 Fixed invokeMethod doesn't test parameter type
+- 2384043 Fixed incorrect process count
+
+Changes in 1.5.7
+================
+
+Bugs Fixed:
+- 1832839 OperatingSystem provider returns wrong number of max processes
+- 1883918 OperatingSystem provider segfaults on file not found
+- 2089383 Shared library use of _init/_fini obsolete
+- 2089546 CIM_OS_DISTRO should only be intialized once
+- 2093799 distro version script guesses wrong
+- 2093965 Linux_OperatingSystem fails to set some properties
+- 2065946 OSBase ProcessorProvider crashes on some platforms
+- 2169940 Linux_Processor: reports wrong value for load percentage
+
+Changes in 1.5.6
+================
+
+Bugs Fixed:
+- 1626832 Test cases for class Linux_BaseBoard and 
+          association Linux_CSBaseBoard added
+
+Changes in 1.5.5
+================
+
+Bugs Fixed:
+- 1368636 Fixed infinite recursion with trace level 4.
+- 1395363 Fixed postinstall step location dependence.
+
+Changes in 1.5.4
+================
+
+Bugs Fixed:
+- 1246886 Fixed provider-register.sh multi-class registration.
+- 1285011 Fixes portability issues (syntax)
+- 1285324 Enhanced pegasus repository detection
+- 1228864 Fixed IA64 Processor Detection
+- 1331755 Fixed timezone recognition problem (on zSeries)
+- 1328703 Fixed strange version string problem 
+- 1203849 Removed compile warnings with CMPI >= 1.0.0
+- 1199129 Full support of CMPI 1.0.0
+- 1331750 Removed invalid clock speeds for zSeries/S390
+- 1353086 Suppress error output in RPM scriptlets
+
+Changes in 1.5.3
+================
+
+Bugs Fixed:
+- 1222571 Fixed segmentation fault on long process command lines.
+- 1236584 Better support for the peculiarities of tog-pegasus
+- 1246639 Removed debug output from libdmi
+
+Changes in 1.5.2
+================
+
+Bugs Fixed:
+- 1214092 Improved algorithm for CPU percentage calculation.
+- 1214090 Fixed provider registration.
+
+Changes in 1.5.1
+================
+
+Bugs Fixed:
+- 1199129 Added toleration for newer (spec-conforming) CMPI headers.
+- 1199449 Fixed compile problem with new indication_helper 0.4.0 .
+- 1198184 Fixed release determination logic.
+- 1183805 Added support for OpenWBEM provider registration.
+- 1211913 Fixed UnixProcess Name, State and Argument field scanning and formatting.

@@ -1,0 +1,23 @@
+********************************************************************************
+class : Linux_OperatingSystemStatisticalData
+
+--------------------------------------------------------------------------------
+Linux_OperatingSystemStatisticalData : -eq 1
+
+--------------------------------------------------------------------------------
+InstanceId : -set
+
+Caption : -set
+Description : -set
+ElementName : -eq -file OperatingSystem.keys[1]
+
+StartStatisticTime : -set
+StatisticTime : -set
+CPUUserTime : -set
+CPUSystemTime : -set
+CPUWaitTime : -set
+CPUIdleTime : -set
+RunQueueLength : -set
+BlockQueueLength : -set
+PagesPagedIn : -set
+PagesPagedOut : -set

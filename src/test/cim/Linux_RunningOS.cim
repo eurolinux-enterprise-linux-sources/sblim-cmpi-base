@@ -1,0 +1,33 @@
+********************************************************************************
+association : Linux_RunningOS
+objectPath : Linux_RunningOS.Antecedent="Linux_OperatingSystem.CSCreationClassName=Linux_ComputerSystem,CSName=testsystem,CreationClassName=Linux_OperatingSystem,Name=testsystem",Dependent="Linux_ComputerSystem.CreationClassName=Linux_ComputerSystem,Name=testsystem"
+sourceRole : Antecedent
+targetRole : Dependent
+sourceClass : Linux_OperatingSystem
+targetClass : Linux_ComputerSystem
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+

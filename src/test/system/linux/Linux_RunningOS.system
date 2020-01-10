@@ -1,0 +1,6 @@
+********************************************************************************
+association : Linux_RunningOS
+
+--------------------------------------------------------------------------------
+Linux_ComputerSystem : -target Linux_OperatingSystem -eq 1
+Linux_OperatingSystem : -target Linux_ComputerSystem -eq 1

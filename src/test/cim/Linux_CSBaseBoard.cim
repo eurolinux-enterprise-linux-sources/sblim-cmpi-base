@@ -1,0 +1,33 @@
+********************************************************************************
+association : Linux_CSBaseBoard
+objectPath : Linux_CSBaseBoard.Antecedent="Linux_ComputerSystem.CreationClassName=Linux_ComputerSystem,Name=testsystem",Dependent="Linux_BaseBoard.CreationClassName=Linux_BaseBoard,Tag=testsystem"
+sourceRole : Antecedent
+targetRole : Dependent
+sourceClass : Linux_ComputerSystem
+targetClass : Linux_BaseBoard
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+
