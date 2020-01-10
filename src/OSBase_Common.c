@@ -42,6 +42,7 @@
 
 /* ---------------------------------------------------------------------------*/
 
+#define DEFAULT_HOST_NAME "localhost.localdomain"
 char * CIM_HOST_NAME          = NULL;
 char * CIM_OS_NAME            = NULL;
 int    CIM_OS_TIMEZONE        = 999;
@@ -155,7 +156,9 @@ void _init_system_name() {
     _OSBASE_TRACE(4,("--- _init_system_name() called : init"));
 
     host = calloc(1,255);
-    if ( gethostname(host, 255 ) == -1 ) { return; }
+    if ( gethostname(host, 255 ) == -1 ) { 
+        _OSBASE_TRACE(4,("--- _init_system_name() : gethostname returned -1"));
+    }
     /* if host does not contain a '.' we can suppose, that the domain is not
      * available in the current value. but we try to get the full qualified
      * hostname.
@@ -185,6 +188,9 @@ void _init_system_name() {
 	strcat( CIM_HOST_NAME, ".");
 	strcat( CIM_HOST_NAME, domain );
       }
+    } else {
+        CIM_HOST_NAME = calloc(1, (strlen(DEFAULT_HOST_NAME) + 1));
+        strcpy(CIM_HOST_NAME, DEFAULT_HOST_NAME);
     }
 
     if(host) free(host);

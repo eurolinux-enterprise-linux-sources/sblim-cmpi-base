@@ -155,6 +155,7 @@ int get_cpu_page_data_24(struct os_statistics *stats) {
     if ((f = fopen(DATA_FILE,"r")) != NULL) {
         read_count = fread(buf,sizeof(char),sizeof(buf)-1,f);
         buf[read_count] = '\0';
+        fclose(f);
 
         /* read cpu data
          *

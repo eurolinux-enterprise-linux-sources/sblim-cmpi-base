@@ -30,6 +30,7 @@
 #include "OSBase_Common.h"
 #include "cmpiOSBase_Common.h"
 #include "cmpiOSBase_Processor.h"
+#include "OSBase_Processor.h"
 
 static const CMPIBroker * _broker;
 
@@ -51,6 +52,7 @@ static const CMPIBroker * _broker;
 CMPIStatus OSBase_ProcessorProviderCleanup( CMPIInstanceMI * mi, 
            const CMPIContext * ctx, CMPIBoolean terminate) { 
   _OSBASE_TRACE(1,("--- %s CMPI Cleanup() called",_ClassName));
+  proc_cancel_thread();
   _OSBASE_TRACE(1,("--- %s CMPI Cleanup() exited",_ClassName));
   CMReturn(CMPI_RC_OK);
 }

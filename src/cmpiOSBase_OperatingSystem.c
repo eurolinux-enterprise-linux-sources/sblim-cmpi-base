@@ -155,6 +155,9 @@ static int getcpu(CpuSample * cps)
     return 0;
   }
   else {
+    if (fcpuinfo) {
+      fclose(fcpuinfo);
+    }
     return -1;
   }
 }

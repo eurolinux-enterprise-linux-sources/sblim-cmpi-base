@@ -8,7 +8,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Summary: SBLIM Base Providers
 Name: sblim-cmpi-base
-Version: 1.6.0
+Version: 1.6.1
 Release: 1
 Group: Systems Management/Base
 URL: http://www.sblim.org

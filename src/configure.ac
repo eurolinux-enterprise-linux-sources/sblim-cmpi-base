@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(SBLIM BaseOS Providers Base, 1.6.0, sblim-devel@lists.sourceforge.net,sblim-cmpi-base)
+AC_INIT(SBLIM BaseOS Providers Base, 1.6.1, sblim-devel@lists.sourceforge.net,sblim-cmpi-base)
 AC_CONFIG_SRCDIR([OSBase_Common.c])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE

@@ -2,7 +2,7 @@
 %define provider_dir %{_libdir}/cmpi
 
 Name:           sblim-cmpi-base
-Version:        1.6.0
+Version:        1.6.1
 Release:        1%{?dist}
 Summary:        SBLIM CMPI Base Providers
 
@@ -123,6 +123,10 @@ fi
 %postun -p /sbin/ldconfig
 
 %changelog
+* Thu Jun 16 2011 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.6.1-1
+- Update to sblim-cmpi-base-1.6.1
+  Resolves: #694514
+
 * Wed Jun 30 2010 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.6.0-1
 - Update to sblim-cmpi-base-1.6.0
 

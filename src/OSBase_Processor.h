@@ -58,6 +58,8 @@ int get_processor_data( char * , struct cim_processor ** );
 void free_processorlist( struct processorlist * );
 void free_processor( struct cim_processor * );
 
+int proc_cancel_thread();
+
 /* ---------------------------------------------------------------------------*/
 
 #ifdef __cplusplus

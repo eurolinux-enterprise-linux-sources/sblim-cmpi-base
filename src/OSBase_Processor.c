@@ -56,6 +56,7 @@ char * CPUINFO = "/proc/cpuinfo";
 #define SAMPLE_PERIOD 60
 #define SAMPLE_INTERVAL 10
 static int SAMPLE_CPU = 1;
+static int running = 1;
 
 static pthread_t tid;
 
@@ -123,12 +124,6 @@ void __attribute__ ((destructor)) _osbase_prodessor_fini() {
   struct cpu_sample * cur_ptr;
   int i;
   
-  /* SAMPLE_CPU = 0; */
-  /* pthread_join(tid, NULL); */
-  
-  pthread_cancel(tid);
-  /* sleep(1); */
-
   for (i = 0; i < num_cpus; i++) {
      cur_ptr = cpu_samples[i]->next;
      cpu_samples[i]->next = NULL;
@@ -141,6 +136,13 @@ void __attribute__ ((destructor)) _osbase_prodessor_fini() {
   
   free(cpu_samples);
   /* free(cpu_loads); */
+}
+
+int proc_cancel_thread() {
+    running = 0;
+    pthread_join(tid, NULL);
+
+    return 1;
 }
 
 int enum_all_processor( struct processorlist ** lptr ) {
@@ -555,7 +557,7 @@ static void * sample_processors(void * data)
   int count = 0;
   int i;
   
-  while (1) {
+  while (running) {
      sleep(SAMPLE_INTERVAL);
      
      for (i = 0; i < num_cpus; i++) {
