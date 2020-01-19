@@ -1,0 +1,21 @@
+********************************************************************************
+class : Linux_UnixProcess
+objectPath : Linux_UnixProcess.CSCreationClassName=Linux_ComputerSystem,CSName=testsystem,OSCreationClassName=Linux_OperatingSystem,OSName=testsystem,CreationClassName=Linux_UnixProcess,Handle=1
+volatile
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED

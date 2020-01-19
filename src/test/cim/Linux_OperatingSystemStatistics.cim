@@ -1,0 +1,42 @@
+********************************************************************************
+association : Linux_OperatingSystemStatistics
+objectPath : Linux_OperatingSystemStatistics.ManagedElement="VALID_VALUE_NOT_NEEDED",Stats="VALID_VALUE_NOT_NEEDED"
+sourceRole : ManagedElement
+targetRole : Stats
+sourceClass : Linux_OperatingSystem
+targetClass : Linux_OperatingSystemStatisticalData
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                     set
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+
+

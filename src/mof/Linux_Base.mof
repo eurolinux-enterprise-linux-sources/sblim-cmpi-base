@@ -1,0 +1,302 @@
+//
+// Linux_Base.mof
+//
+// (C) Copyright IBM Corp. 2002, 2009
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+// ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:       Heidi Neumann <heidineu@de.ibm.com>
+// Contributors:
+//
+// Description:
+// CIM classes for Linux Base System Instrumentation
+//
+
+
+#pragma locale ("en_US")
+//#pragma namespace ("root/cimv2")
+
+
+// -------------------------------------------------------------------
+// *******************************************************************
+// 	Classes
+// *******************************************************************
+// -------------------------------------------------------------------
+
+
+
+// ===================================================================
+// 	Linux_ComputerSystem
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_ComputerSystemProvider"),
+  Description ("A class derived from ComputerSystem"
+  " to represent the GNU/Linux OS on a Desktop, Mobile, NetPC,"
+  " Server or other type of a single node Computer System ." )
+]
+class Linux_ComputerSystem : CIM_ComputerSystem
+{ 
+  string LPARID;
+};
+
+
+// ===================================================================
+// 	Linux_BaseBoard
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_BaseBoardProvider") ] 
+class Linux_BaseBoard : CIM_Card
+{
+  string UUID;
+};
+
+
+// ===================================================================
+// 	Linux_OperatingSystem
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_OperatingSystemProvider") ]
+class Linux_OperatingSystem : CIM_OperatingSystem
+{
+  [ Description("The LanguageEdition property indicates the national "
+    "language version of the installed operating system, for example "
+    "US English. For many operating systems this value is given as a "
+    "standard international numeric abbrevation for a country or "
+    "region. Each language has a unique language identifier that "
+    "consists of a primary language identifier and a secondary "
+    "language identifier, for example en-US."
+    "If such a language identifier is not available for an operating "
+    "system the native value from the operating system, that "
+    "expresses its language version is used, for example ENU.")
+  ]
+  string LanguageEdition;
+
+  [ Description("The CodeSet property indicates the code page value "
+    "used by the operating system. A code page contains a character "
+    "table used by the operating system to translate strings for "
+    "different languages. The American National Standards Institute "
+    "(ANSI) lists values that represent defined code pages. "
+    "Examples are ISO-8859-1, UTF-8 or IBM1047. If the operating "
+    "system does not use an ANSI code page, this member will be set "
+    "to 0."),
+    MaxLen(64)
+  ]
+  string CodeSet;
+
+  [ Description("The default size of pages used by the virtual "
+    "memory management system in units of bytes. For systems that "
+    "do not have the concept of virtual memory, 0 MUST be returned. "
+    "For example the default page size my be 4096 bytes."),
+    Units("Bytes")
+  ]
+  uint32 DefaultPageSize;
+
+  [ Description("Average total cpu time in percents."),
+    Units("Percent")
+  ]
+  uint16 PctTotalCPUTime;
+
+  uint8 execCmd([IN] string cmd, [OUT] string out);
+};
+
+
+// ===================================================================
+// 	Linux_OperatingSystemStatisticalData
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_OperatingSystemStatisticalDataProvider") ] 
+class Linux_OperatingSystemStatisticalData : CIM_StatisticalData
+{
+  [ Counter,
+    Description("The cumulative time the system ran in user mode "
+    "since system startup.")
+  ]
+  uint64 CPUUserTime;
+
+  [ Counter,
+    Description("The cumulative time the system ran in system mode "
+    "since system startup.")
+  ]
+  uint64 CPUSystemTime;
+
+  [ Counter,
+    Description("The cumulative time the system waited for I/O "
+    "requests to be completed since system startup.")
+  ]
+  uint64 CPUWaitTime;
+
+  [ Counter,
+    Description("The cumulative time the system was idle since "
+    "system startup.")
+  ]
+  uint64 CPUIdleTime;
+
+  [ Counter,
+    Description("The amount of processes currently running or "
+    "ready to be run.")
+  ]
+  uint64 RunQueueLength;
+
+  [ Counter,
+    Description("The amount of processes currently waiting for "
+    "I/O requests to be completed.")
+  ]
+  uint64 BlockQueueLength;
+
+  [ Counter,
+    Description("The amount of pages paged in since system "
+    "startup.")
+  ]
+  uint64 PagesPagedIn;
+
+  [ Counter,
+    Description("The amount of pages paged out since system "
+    "startup.")]
+  uint64 PagesPagedOut;
+};
+
+
+// ===================================================================
+// 	Linux_UnixProcess
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_UnixProcessProvider") ] 
+class Linux_UnixProcess : CIM_UnixProcess
+{
+  uint32 MaxNumberOfChildProcesses ;
+  uint32 MaxNumberOfOpenFiles ;
+  uint32 MaxRealStack ;
+
+  uint8 terminate();
+};
+
+
+// ===================================================================
+// 	Linux_Processor
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_ProcessorProvider") ] 
+class Linux_Processor : CIM_Processor
+{ };
+
+
+
+// -------------------------------------------------------------------
+// *******************************************************************
+// 	Associations
+// *******************************************************************
+// -------------------------------------------------------------------
+
+
+// ===================================================================
+// 	Linux_RunningOS
+// ===================================================================
+
+[ Association, 
+  Provider("cmpi:cmpiOSBase_RunningOSProvider") ] 
+class Linux_RunningOS : CIM_RunningOS
+{
+  [ Override ("Antecedent"),
+    Description ("The current running OS.")
+  ]
+  Linux_OperatingSystem REF Antecedent;
+
+  [ Override ("Dependent"),
+    Description ("The Computer System Container.")
+  ]
+  Linux_ComputerSystem REF Dependent; 
+};
+
+
+// ===================================================================
+// 	Linux_CSBaseBoard
+// ===================================================================
+
+[ Association,
+  Provider("cmpi:cmpiOSBase_CSBaseBoardProvider") ] 
+class Linux_CSBaseBoard : CIM_ComputerSystemPackage
+{ 
+  [ Override ("Antecedent"),
+    Description ("The BaseBoard, representing the physical CS "
+    "information.")
+  ]
+  Linux_BaseBoard REF Antecedent;
+
+  [ Override ("Dependent"),
+    Description ("The Computer System Container.")
+  ]
+  Linux_ComputerSystem REF Dependent;
+};
+
+
+// ===================================================================
+// 	Linux_OSProcess
+// ===================================================================
+
+[ Association, 
+  Aggregation,
+  Composition, 
+  Provider("cmpi:cmpiOSBase_OSProcessProvider") ] 
+class Linux_OSProcess : CIM_OSProcess
+{
+  [ Override ("GroupComponent"),
+    Description ("The current running OS.")
+  ]
+  Linux_OperatingSystem REF GroupComponent;
+
+  [ Override ("PartComponent"),
+    Description ("The current running Processes.")
+  ]
+  Linux_UnixProcess REF PartComponent;
+};
+
+
+// ===================================================================
+// 	Linux_OperatingSystemStatistics
+// ===================================================================
+
+[ Association, 
+  Provider("cmpi:cmpiOSBase_OperatingSystemStatisticsProvider") ] 
+class Linux_OperatingSystemStatistics : CIM_ElementStatisticalData
+{
+  [ Override("ManagedElement"),
+    Min(1),
+    Max(1),
+    Description("The System to which the statistics apply.")
+  ]
+  Linux_OperatingSystem REF ManagedElement;
+
+  [ Override("Stats"),
+    Description("The statistical object.")
+  ]
+  Linux_OperatingSystemStatisticalData REF Stats;
+};
+
+
+// ===================================================================
+// 	Linux_CSProcessor
+// ===================================================================
+
+[ Association, 
+  Aggregation,
+  Composition,
+  Provider("cmpi:cmpiOSBase_CSProcessorProvider") ] 
+class Linux_CSProcessor : CIM_SystemDevice
+{ 
+  [ Override ("GroupComponent"),
+    Description ("The Computer System Container.")
+  ]
+  Linux_ComputerSystem REF GroupComponent;
+
+  [ Override ("PartComponent"),
+    Description ("The Processors, available to the CS.")
+  ]
+  Linux_Processor REF PartComponent;
+};
+
+

@@ -1,0 +1,6 @@
+********************************************************************************
+association : Linux_CSProcessor
+
+--------------------------------------------------------------------------------
+Linux_ComputerSystem : -target Linux_Processor -eq -cmd cat /proc/cpuinfo | grep -c ^processor
+Linux_Processor : -target Linux_ComputerSystem -eq 1

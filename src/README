@@ -1,0 +1,217 @@
+/* ---------------------------------------------------------------------------*/
+(C) Copyright IBM Corp. 2003, 2009
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from
+http://www.opensource.org/licenses/eclipse-1.0.php
+
+Author:       Heidi Neumann <heidineu@de.ibm.com>
+Date  :	      03/18/2003
+
+/* ---------------------------------------------------------------------------*/
+
+
+SBLIM CMPI Base Instrumentation README
+--------------------------------------
+
+
+
+Introduction
+------------
+
+The Base Instrumentation allows you to get the very base system information 
+via CIMOM technology/infrastructure.
+
+The instrumented classes / associations are
+
+- Linux_ComputerSystem
+- Linux_BaseBoard
+- Linux_OperatingSystem
+- Linux_OperatingSystemStatisticalData
+- Linux_UnixProcess
+- Linux_Processor
+- Linux_RunningOS
+- Linux_OSProcess
+- Linux_OperatingSystemStatistics
+- Linux_CSProcessor
+- Linux_CSBaseBoard
+
+
+
+Package Contents
+----------------
+
+./README		This file
+./README.INDICATION	README for Indication Support
+./*.h			Header Files
+./*.c			Provider Code
+./mof/			Schema file(s)
+./test/			Configuration files for SBLIM TestSuite
+./test/indication	Sample Filter, Handler and Subscription to
+			test the Indication Support
+
+
+
+CIMOM Build Instructions
+------------------------
+
+
+Prerequisites
+.............
+- CIMOM installed
+- CMPI enabled CIMOM
+- CIM Schema Version 2.7 and higher loaded into the CIMOM's
+  repository
+- to enable Indication support:
+  SBLIM package indication_helper installed
+
+
+Building CIMOM and CMPI for this CIMOM
+......................................
+Please follow the instructions in the README.cmpi file of 
+the cmpi-adapter package.
+CMPI support is available for OpenPegasus, OpenCimom (former
+SNIA CIMOM) and OpenWBEM
+- Pegasus   ... CMPI is part of Pegasus
+- OpenCimom ... install SBLIM cmpi-adapter for snia
+- OpenWBEM  ... CMPI is part of OpenWBEM
+
+
+Building cmpi-base
+..................
+
+This package is now GNU autotool enabled, refer to the file
+named INSTALL for generic instructions.
+
+The generated configure script tries to determine where the CMPI header files
+are located. For this purpose it searches a set of well-known locations.
+The "canonical" location is /usr/include/cmpi or /usr/local/include/cmpi,
+depending on how configure is invoked.
+
+Further, configure "determines" where providers are to be installed. Actually,
+there's no detection logic. The provider directory will always be
+/usr/lib/cmpi or /usr/local/lib/cmpi. If a CIM server requires a particular
+directory this can be selected by specifying the PROVIDERDIR variable.
+
+And finally, configure tries to find out which CIM server type is being used.
+This is necessary in order to select the appropriate schema and provider
+registration technique. If the CIM server is not or incorrectly identified,
+it is possible to specify it via the CIMSERVER variable.
+Supported values are pegasus, sfcb, openwbem and sniacimom.
+
+For instance, in order to configure for a locally installed Pegasus you can
+issue the following command:
+./configure CIMSERVER=pegasus PROVIDERDIR=$PEGASUS_HOME/lib
+
+
+Load Schema into CIMOM's repository
+...................................
+
+with Pegasus / OpenWBEM /sfcb :
+...............................
+The loading and registering of the classes/associations and
+their provider is done during the "make postinstall".
+
+with OpenCimom/SNIA CIMOM :
+...........................
+Start the cimbrowser (/usr/sniacimom/bin). Load the schema
+file Linux_Base.mof with "File" -> "Reload Mof" into the 
+namespace root/cimv2. Before at least CIM Core and System
+schemata have to be loaded into the repository.
+
+
+
+Common Libraries
+----------------
+
+- OSBase_Common :
+  implements the resource access and is responsible for common
+  data gathering 
+
+- cmpiOSBase_Common :
+  contains tool functionality to write generic CMPI Provider
+  and implements tool function, which handle CIM specific
+  formats or data
+
+- dmiinfo :
+  data access to x86 SMBIOS informations (/dev/mem)
+  ROOT ACCESS RIGHTS NEEDED TO EXECUTE
+
+
+
+Class/Association specific Libraries
+------------------------------------
+
+class Linux_ComputerSystem
+..........................
+- cmpiOSBase_ComputerSystemProvider.c
+- cmpiOSBase_ComputerSystem.c/.h
+- OSBase_ComputerSystem.c/.h
+
+class Linux_BaseBoard
+.....................
+- cmpiOSBase_BaseBoardProvider.c
+- cmpiOSBase_BaseBoard.c/.h
+- OSBase_BaseBoard.c/.h
+
+class Linux_OperatingSystem
+...........................
+- cmpiOSBase_OperatingSystemProvider.c
+- cmpiOSBase_OperatingSystem.c/.h
+- OSBase_OperatingSystem.c/.h
+
+class Linux_OperatingSystemStatisticalData
+..........................................
+- cmpiOSBase_OperatingSystemStatisticalDataProvider.c
+- cmpiOSBase_OperatingSystemStatisticalData.c/.h
+- OSBase_OperatingSystemStatisticalData.c/.h
+
+class Linux_UnixProcess
+.......................
+- cmpiOSBase_UnixProcessProvider.c
+- cmpiOSBase_UnixProcess.c/.h
+- OSBase_UnixProcess.c/.h
+
+class Linux_Processor
+.....................
+- cmpiOSBase_ProcessorProvider.c
+- cmpiOSBase_Processor.c/.h
+- OSBase_Processor.c/.h
+
+
+association Linux_RunningOS
+...........................
+- cmpiOSBase_RunningOSProvider.c
+
+association Linux_OSProcess
+...........................
+- cmpiOSBase_OSProcessProvider.c
+
+association Linux_OperatingSystemStatistics
+...........................................
+- cmpiOSBase_OperatingSystemStatisticsProvider.c
+
+association Linux_CSProcessor
+.............................
+- cmpiOSBase_CSProcessorProvider.c
+
+association Linux_CSBaseBoard
+.............................
+- cmpiOSBase_CSBaseBoardProvider.c
+
+
+
+Automated Function Verifcation Test 
+-----------------------------------
+
+The sub directory test contains the configuration files,
+necessary to drive the SBLIM Test Suite. The SBLIM Test
+Suite is a tool to automate function verification tests
+of providers. 
+
+How to set up and drive the test is described in the 
+README.TEST file.
+

@@ -1,0 +1,12 @@
+diff -up sblim-cmpi-base-1.6.0/provider-register.sh.orig sblim-cmpi-base-1.6.0/provider-register.sh
+--- sblim-cmpi-base-1.6.0/provider-register.sh.orig	2009-07-25 02:37:31.000000000 +0200
++++ sblim-cmpi-base-1.6.0/provider-register.sh	2010-12-13 13:53:31.947635745 +0100
+@@ -351,7 +351,7 @@ sfcb_rebuild()
+     if ps -C sfcbd > /dev/null 2>&1
+     then
+         # sfcb is running -- need to restart
+-	for INITSCRIPT in /etc/init.d/sfcb /usr/local/etc/init.d/sfcb none
++	for INITSCRIPT in /etc/rc.d/init.d/sblim-sfcb /etc/init.d/sfcb /usr/local/etc/init.d/sfcb none
+ 	do
+ 	  if test -x $INITSCRIPT
+ 	  then

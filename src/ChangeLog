@@ -1,0 +1,1639 @@
+2012-11-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, OSBase_UnixProcess.c:
+
+	Fixed 3582069: Linux_UnixProcess command injection vulnerability
+
+2012-02-07  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* Makefile.am, NEWS:
+
+	Fixed 3424288: Underlinked libcmpiOSBase_ProcessorProvider.so
+
+2011-05-23  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, OSBase_OperatingSystem.c:
+
+	Fixed 3306580: wrong OperatingSystem.Version prop value on RHEL6
+
+2011-05-23  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, test/test-cmpi-base.sh:
+
+	Fixed 3275169: bash error reported in provider bootstrap scripts
+
+2011-01-04  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Update release info for 1.6.1
+
+2010-12-20  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, OSBase_Processor.c, OSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c:
+
+	Fixed 2610775: ProcessorProvider crashes on exit
+
+2010-12-20  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, OSBase_Common.c:
+
+	Fixed 2836926: _osbase_common_init unreliable
+
+2010-01-21  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* contributions.txt:
+
+	Changed sfcb to sblim-cmpi-base in contributions file
+
+2009-12-15  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, cmpiOSBase_OperatingSystem.c:
+
+	Fixed 2882514: leak in
+	sblim-cmpi-base-1.5.9/cmpiOSBase_OperatingSystem.c
+
+2009-08-25  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, OSBase_OperatingSystemStatisticalData.c, contributions.txt:
+
+	Fixed 2843613: Missing fclose in sblim-cmpi-base     (patch by
+	Michal Hrušecký)
+
+2009-07-24  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Updated for 1.6.0 release
+
+2009-07-24  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* COPYING, Makefile.am, NEWS, OSBase_BaseBoard.c,
+	OSBase_BaseBoard.h, OSBase_Common.c, OSBase_Common.h,
+	OSBase_ComputerSystem.c, OSBase_ComputerSystem.h,
+	OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	OSBase_OperatingSystemStatisticalData.c,
+	OSBase_OperatingSystemStatisticalData.h, OSBase_Processor.c,
+	OSBase_Processor.h, OSBase_UnixProcess.c, OSBase_UnixProcess.h,
+	README, README.INDICATION, acinclude.m4, autoconfiscate.sh,
+	cmpiOSBase_BaseBoard.c, cmpiOSBase_BaseBoard.h,
+	cmpiOSBase_BaseBoardProvider.c, cmpiOSBase_CSBaseBoardProvider.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_OperatingSystemStatisticalData.h,
+	cmpiOSBase_OperatingSystemStatisticalDataProvider.c,
+	cmpiOSBase_OperatingSystemStatisticsProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c, cmpiOSBase_Util.h, dmifind.h,
+	dmiinfo.c, dmiinfo.h, dmitest.c, mlogsup.c, mlogsup.h,
+	provider-register.sh, sblim-cmpi-base.rh.spec,
+	sblim-cmpi-base.spec.in, sysman.h, sysman_pid.c,
+	mof/Linux_Base.mof, mof/Linux_BaseIndication.mof:
+
+	Fixed 2795176: migrate provider licenses to EPL
+
+2009-03-25  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* README.INDICATION:
+
+	wbemcat comes with sfcb, and wbemexec comes with Pegasus.
+
+2009-03-10  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, configure.ac:
+
+	Add 1.5.9 release Labels
+
+2009-02-24  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* Makefile.am, ChangeLog, NEWS:
+
+	[ 2634178 ] Versioned libcmpiOSBase_OperatingSystemProvider
+
+2009-01-14  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c, ChangeLog, NEWS:
+
+	[ 2508592 ] cmpi-base: add CMPIStatus to indication function return
+
+2008-12-10  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, configure.ac:
+
+	Prep for release of version 1.5.8
+
+2008-12-03  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* cmpiOSBase_BaseBoardProvider.c:
+
+	Fixed compile warning
+
+2008-12-03  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* .cvsignore:
+
+	Added .cvsignore file with list of build generated files that can
+	be ignored when processing a cvs ci/update/diff/... command
+
+2008-12-03  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	[ 2384043 ] cmpi-base: incorrect process count
+
+2008-12-03  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	[ 2384043 ] cmpi-base: incorrect process count
+
+2008-11-17  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c, ChangeLog, NEWS:
+
+	[ 2308219 ] cmpi-base: invokeMethod doesn't test parameter type
+
+2008-11-11  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog:
+
+	[1203827] update cmpi-base README.INDICATION for sfcb support
+
+2008-11-11  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	1203827 update cmpi-base README.INDICATION for sfcb support
+
+2008-11-11  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* README.INDICATION,
+	test/indication/SFCBCreateFilter.localhost.xml,
+	test/indication/SFCBCreateHandler.localhost.xml,
+	test/indication/SFCBCreateSubscription.localhost.xml,
+	test/indication/SFCBDeleteFilter.localhost.xml,
+	test/indication/SFCBDeleteHandler.localhost.xml,
+	test/indication/SFCBDeleteSubscription.localhost.xml:
+
+	[1203827] update cmpi-base README.INDICATION for sfcb support
+
+2008-10-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* configure.ac:
+
+	Updating version to 1.5.7 for release
+
+2008-10-20  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	[2169940] Linux_Processor: reports wrong value for load percentage
+
+2008-10-20  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_Processor.c, OSBase_Processor.h:
+
+	[2169940] Linux_Processor: reports wrong value for load percentage
+
+2008-09-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	[ 2065946 ] OSBase ProcessorProvider crashes on some platforms
+
+2008-09-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_Processor.c, configure.ac:
+
+	[ 2065946 ] OSBase ProcessorProvider crashes on some platforms
+
+2008-09-09  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_OperatingSystem.c,
+	OSBase_OperatingSystem.h, cmpiOSBase_OperatingSystem.c:
+
+	[ 2093965 ] Linux_OperatingSystem fails to set some properties
+
+2008-09-09  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_OperatingSystem.c,
+	test/system/linux/Linux_OperatingSystem.version.sh:
+
+	[ 2093799 ] cmpi-base: distro version script guesses wrong
+
+2008-09-04  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_Common.c, OSBase_Common.h, OSBase_ComputerSystem.c,
+	cmpiOSBase_Common.c, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_UnixProcess.c:
+
+	[ 2089546 ] cmpi-base: CIM_OS_DISTRO should only be intialized once
+	   * Original fix broke OSBase_Common API used by other packages
+
+2008-09-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	[ 2089546 ] cmpi-base: CIM_OS_DISTRO should only be intialized once
+
+2008-09-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_Common.c, OSBase_Common.h, OSBase_ComputerSystem.c,
+	OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	cmpiOSBase_Common.c, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_UnixProcess.c:
+
+	[ 2089546 ] cmpi-base: CIM_OS_DISTRO should only be intialized once
+
+2008-09-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	1883918       OperatingSystem provider segfaults on file not found
+	2089383       cmpi-base: Shared library use of _init/_fini obsolete
+
+2008-09-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* Makefile.am, OSBase_Common.c, OSBase_OperatingSystem.c:
+
+	[ 2089383 ] cmpi-base: Shared library use of _init/_fini obsolete
+
+2008-09-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	[ 1883918 ] OperatingSystem provider segfaults on file not found
+
+2007-11-19  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* mof/: Linux_Base.mof, Linux_BaseIndication.mof:
+
+	updated URL for CPL (1833455)
+
+2007-11-19  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* OSBase_BaseBoard.c, OSBase_BaseBoard.h, OSBase_Common.c,
+	OSBase_Common.h, OSBase_ComputerSystem.c, OSBase_ComputerSystem.h,
+	OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	OSBase_OperatingSystemStatisticalData.c,
+	OSBase_OperatingSystemStatisticalData.h, OSBase_Processor.c,
+	OSBase_Processor.h, OSBase_UnixProcess.c, OSBase_UnixProcess.h,
+	cmpiOSBase_BaseBoard.c, cmpiOSBase_BaseBoard.h,
+	cmpiOSBase_BaseBoardProvider.c, cmpiOSBase_CSBaseBoardProvider.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_OperatingSystemStatisticalData.h,
+	cmpiOSBase_OperatingSystemStatisticalDataProvider.c,
+	cmpiOSBase_OperatingSystemStatisticsProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c, cmpiOSBase_Util.h, dmifind.h,
+	dmiinfo.c, dmiinfo.h, dmitest.c, mlogsup.c, mlogsup.h, sysman.h,
+	sysman_pid.c, README, README.INDICATION:
+
+	updated URL for CPL (1833455)
+
+2007-11-16  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_OperatingSystem.c:
+
+	fixed 1832839: OperatingSystem provider returns wrong max processes
+
+2007-02-01  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* NEWS, configure.ac:
+
+	increased release number to 1.5.6
+
+2007-01-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, Makefile.am, NEWS, test/test-cmpi-base.sh,
+	test/cim/Linux_BaseBoard.cim, test/cim/Linux_CSBaseBoard.cim,
+	test/system/linux/Linux_BaseBoard.system,
+	test/system/linux/Linux_CSBaseBoard.system:
+
+	[1626832] test cases for class Linux_BaseBoard and association
+	Linux_CSBaseBoard added
+
+2006-12-27  Sven Schuetz <sven@de.ibm.com>
+
+	* test/indication/: PegasusDeleteFilter.localhost.xml,
+	PegasusDeleteHandler.localhost.xml:
+
+	[ 1622694 ] Unsubscribe indication failed
+
+2006-12-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* configure.ac:
+
+	updated version number
+
+2006-02-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, NEWS, acinclude.m4, configure.ac,
+	provider-register.sh:
+
+	[ 1395363 ] Providers' postinstall step location dependent.  Fixed
+	Makefile and updated autoconf/deployment files from cmpi-samples.
+
+2006-01-23  Lynn Moss <lynn@us.ibm.com>
+
+	* Makefile.am:
+
+	bug#1406860 - sblim-cmpi-syslog doesnt compile
+
+2005-11-30  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	Changelog for 1368636.
+
+2005-11-30  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* OSBase_Common.c:
+
+	[ 1368636 ] non-terminating loop in cmpi-base trace facility.
+	Fixed by removing trace call for get_os_timezone.
+
+2005-11-10  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, NEWS, README.tog-pegasus,
+	sblim-cmpi-base.rh.spec:
+
+	Bugs fixed: 1353086. Enhanced RedHat RPM spec and added
+	documentation for tog-pegasus registration and deregistration.
+
+2005-11-10  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c:
+
+	Bugfix addendum for 1203849: was not testing with indication
+	support enabled. Done now.
+
+2005-11-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_Processor.c, cmpiOSBase_Processor.c:
+
+	Bugs fixed: 1331750. Clock speeds for S390 were useless - removed.
+
+2005-11-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, cmpiOSBase_BaseBoard.c, cmpiOSBase_BaseBoard.h,
+	cmpiOSBase_BaseBoardProvider.c, cmpiOSBase_CSBaseBoardProvider.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_OperatingSystemStatisticalData.h,
+	cmpiOSBase_OperatingSystemStatisticalDataProvider.c,
+	cmpiOSBase_OperatingSystemStatisticsProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c, configure.ac:
+
+	Bugs fixed: 1199129, 1203849. Enhanced compatibility with CMPI
+	1.0.0, removed compile warnings.
+
+2005-11-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_OperatingSystem.c:
+
+	Bugs fixed: 1328703. The LSB version is only displayed if no other
+	version information can be found.
+
+2005-11-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* OSBase_Common.c:
+
+	Fix for 1131521076 checkin. Timezone was returned in seconds not
+	minutes.
+
+2005-11-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_Common.c, OSBase_OperatingSystem.c:
+
+	Bugs fixed: 1331755. Timezone wrong on zSeries.
+
+2005-11-08  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	Reflect bugfix updates.
+
+2005-11-08  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* OSBase_Processor.c:
+
+	Bugs fixed: 1228864.
+
+2005-10-28  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* sblim-cmpi-base.rh.spec, sblim-cmpi-base.spec.in:
+
+	RPM Specfile minor cleanup.
+
+2005-10-19  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, configure.ac, sblim-cmpi-base.rh.spec,
+	sblim-cmpi-base.spec.in:
+
+	New RH/Fedora Spec file added.
+
+2005-09-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	ChangeLog/NEWS update.
+
+2005-09-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* configure.ac, provider-register.sh:
+
+	Bugs: 1285011, 1285324. Copied over from cmpi-samples.
+
+2005-09-06  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	Updated ChangeLog and NEWS.
+
+2005-09-06  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh:
+
+	Bugs fixed: 1246886. Updated provider-register.sh.
+
+2005-08-18  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* provider-register.sh:
+
+	Removed "-" improperly being prefixed to pathnames that are passed
+	to the basename command.
+
+2005-07-28  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac, dmiinfo.c,
+	sblim-cmpi-base.spec.in:
+
+	Bugs fixed: 1236584, 1246639.  RPM Build Enhancements.	Removed
+	debug output.
+
+2005-07-27  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, sblim-cmpi-base.spec.in:
+
+	RPM build makeup to address some of rpmlint's complaints.
+
+2005-07-26  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* configure.ac, sblim-cmpi-base.spec.in:
+
+	Update spec file for rpmlint compliance.
+
+2005-07-14  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, test/test-cmpi-base.sh,
+	test/system/linux/Linux_OperatingSystemStatisticalData.system,
+	test/system/linux/Linux_OperatingSystemStatistics.system:
+
+	Bugs fixed: 1236584. Added new test files for statistical data,
+	fixed test script non-local invokation.
+
+2005-07-12  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac, provider-register.sh,
+	sblim-cmpi-base.spec.in, test/test-cmpi-base.sh:
+
+	Bugs fixed: 1236584. Mostly enhanced compatibility with tog-pegasus
+	RPM.
+
+2005-06-20  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_Common.c:
+
+	Bugs fixed: 1222571 Segmentation Fault on long process command
+	lines.
+
+2005-06-07  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* configure.ac:
+
+	Increased version number.
+
+2005-06-07  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, README.INDICATION, cmpiOSBase_OperatingSystem.c,
+	provider-register.sh, mof/Linux_BaseIndication.registration,
+	test/system/linux/Linux_OperatingSystem.system:
+
+	Bugs fixed: 1214090 Provider Deregistration.  1214092 CPU
+	Percentage Calculation.
+
+2005-05-31  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* AUTHORS, ChangeLog, NEWS, OSBase_OperatingSystem.c,
+	OSBase_UnixProcess.c, README, configure.ac,
+	test/system/linux/Linux_OperatingSystem.version.sh:
+
+	Bugs fixed: 1211913 UnixProcess data extraction and formatting.
+	1198184 implemented Ferenc Szalai's suggestion for release
+	determination.
+
+2005-05-17  Gareth Bestor <bestor@us.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c:
+
+	fixed spelling of IND_BEHAVIOUR_LEVEL_EDGE
+
+2005-05-12  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_OperatingSystem.c, acinclude.m4,
+	provider-register.sh:
+
+	Bugs fixed: 1183805 1198184.  Fixed release determination code.
+	Added support for OpenWBEM provider registration.
+
+2005-05-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, cmpiOSBase_OperatingSystemProvider.c:
+
+	Fixed bugs: 1199449.  Adapted to new indication_helper signature.
+
+2005-05-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Bugs fixed: 1199129.  Now compiles with cmpi-devel 1.0.0.
+
+2005-04-28  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh, sblim-cmpi-base.spec.in:
+
+	Bug 1191544: Added CIMOM autodetection to provider-register.sh and
+	changed spec to be CIMOM agnostic.
+
+2005-04-27  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh:
+
+	Bug 1190981: support for $PEGASUS_HOME/bin added.
+
+2005-04-27  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* sblim-cmpi-base.spec.in:
+
+	Changed buildroot to allow concurrent RPM builds of different
+	packages.
+
+2005-04-27  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* acinclude.m4:
+
+	Upgrade to current acinclude.m4.
+
+2005-04-27  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh:
+
+	Esthetical fix: remove one blank from the usage line.
+
+2005-04-26  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* mof/: Linux_Base.sfcb.reg, Linux_BaseIndication.sfcb.reg,
+	Linux_BaseIndicationReg.mof, Linux_BaseRegistration.mof:
+
+	Bug 1183788: removed legacy registration files.
+
+2005-04-26  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, provider-register.sh, sblim-cmpi-base.spec.in,
+	mof/Linux_Base.registration, mof/Linux_BaseIndication.registration:
+
+	Bug 1183788: added comments to registration file syntax and made
+	the multi-registration file syntax more Makefile-friendly.
+
+2005-04-25  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, provider-register.sh, sblim-cmpi-base.spec.in,
+	mof/Linux_Base.registration, mof/Linux_Base.sfcb.reg,
+	mof/Linux_BaseIndication.registration:
+
+	Bug 1183788: Added support for deinstallation/deregistration of
+	providers. Both for Makefile and RPM installs.
+
+2005-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* AUTHORS, ChangeLog, Makefile.am,
+	OSBase_OperatingSystemStatisticalData.c,
+	OSBase_OperatingSystemStatisticalData.h, README,
+	cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OperatingSystemStatisticalData.c,
+	cmpiOSBase_OperatingSystemStatisticalData.h,
+	cmpiOSBase_OperatingSystemStatisticalDataProvider.c,
+	cmpiOSBase_OperatingSystemStatisticsProvider.c, configure.ac,
+	mof/Linux_Base.mof, mof/Linux_Base.sfcb.reg,
+	mof/Linux_BaseRegistration.mof, test/test-cmpi-base.sh,
+	test/cim/Linux_OperatingSystemStatisticalData.cim,
+	test/cim/Linux_OperatingSystemStatistics.cim:
+
+	feature request# 1186592: support for OS statistical information
+	added ... contribution by Michael Schuele :) ... thx
+
+2005-04-15  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* README:
+
+	README correction.
+
+2005-04-15  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am:
+
+	Bug 1179465: Fixed distribution list for test files.
+
+2005-04-14  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* acinclude.m4:
+
+	Bug 1182583: set have_CMPI to no if no headers found.
+
+2005-04-14  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c:
+
+	bug# 1183083: fixed the problem, that only the first indication of
+	the monitored OS OperationalStatus property was delivered
+
+2005-04-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystem.c:
+
+	minor updates to retrieve the value of OperationalStatus
+
+2005-04-13  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, README.TEST, acinclude.m4, configure.ac,
+	sblim-cmpi-base.spec.in, test/README, test/makefile:
+
+	Bug 1179465: Added testsuite support to the automake build.  This
+	included additional check macros in acinclude.m4 (phew).  Further
+	the RPM specs had to be adapted.
+
+2005-04-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, test/indication/PegasusCreateFilter.localhost.xml:
+
+	bug# 1181317: fixed sample indication filter in test/indication
+	directory. Filter was still for old Linux_OperatingSystemIndication
+	class, but should be for CIM_InstModification
+
+2005-04-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* acinclude.m4:
+
+	Bug 1179453: CPPFLAGS was overwritten, if indication helper in
+	standard place.
+
+2005-04-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* Makefile.am, acinclude.m4:
+
+	Bug 1174684: Replaced sfcBroker by sfcbd.  Further, added
+	cmpiOSBase_Common to the list of exported headers.
+
+2005-04-08  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* configure.ac:
+
+	Version 1.4.3.
+
+2005-04-08  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* acinclude.m4, configure.ac:
+
+	Bug 1177872: addendum, now search in includedir/sblim for the
+	indication helper header.
+
+2005-04-08  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, OSBase_BaseBoard.c:
+
+	bug# 1179049: switched value of Vendor and Model on PPC; fixed
+	SerialNumber from 9 digits to 7 valid digits
+
+2005-04-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c:
+
+	Bug 1178575: fixed seg fault of IndicationCleanup()
+
+2005-04-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README:
+
+	fixed configure sample for locally installed openPegasus
+
+2005-04-06  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* README:
+
+	Adapted build instructions to new build process.
+
+2005-04-06  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* AUTHORS, CHANGE.LOG, COPYING, ChangeLog, Makefile.am, NEWS,
+	acinclude.m4, autoconfiscate.sh, configure.ac, license.html,
+	makefile, platform.sh, provider-register.sh,
+	sblim-cmpi-base.spec.in, setting.cmpi, mof/Linux_Base.sfcb.reg,
+	mof/Linux_BaseIndication.sfcb.reg, mof/makefile.pegasus,
+	mof/makefile.standalone:
+
+	Bug 1177872: Autoconfiscate the cmpi-base package.
+
+2005-04-06  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, README.INDICATION, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c,
+	mof/Linux_BaseIndicationReg.mof:
+
+	ported OperatingSystem'S process indication of OperationalStatus to
+	become a life-cycle indication
+
+2005-04-06  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_Common.c:
+
+	restructured init process for SBLIM tracing into a file
+
+2005-03-17  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, README.INDICATION, mof/Linux_Base.mof,
+	mof/Linux_BaseIndication.mof, mof/Linux_BaseIndicationReg.mof,
+	mof/Linux_BaseRegistration.mof, mof/makefile.pegasus,
+	test/indication/PegasusCreateFilter.localhost.xml,
+	test/indication/PegasusCreateHandler.localhost.xml,
+	test/indication/PegasusCreateSubscription.localhost.xml,
+	test/indication/PegasusDeleteFilter.localhost.xml,
+	test/indication/PegasusDeleteHandler.localhost.xml,
+	test/indication/PegasusDeleteSubscription.localhost.xml:
+
+	added sample subscripion to test/indication directory (for
+	openPegasus); updated README.INDICATION with better description and
+	sample
+
+2005-03-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	fixed bug# 1155823 and bug# 1155834
+
+2005-03-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	fixed bug# 1155834: InstallDate on Fedora was not set
+
+2005-03-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	fixed bug# 1155823: wrong values for TotalVirtualMemorySize,
+	FreeVirtualMemory, TotalVisibleMemorySize, FreePhysicalMemory,
+	SizeStoredInPagingFiles and FreeSpaceInPagingFiles for kernel 2.6
+	reported
+
+2005-03-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_ComputerSystem.c:
+
+	fixed retrieval of LPARID on Power
+
+2005-03-01  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	removed invalid entry
+
+2005-02-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c:
+
+	fixed possible memory leaks found by a software analysis tool
+
+2005-02-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, README, README.INDICATION,
+	cmpiOSBase_OperatingSystem.c, cmpiOSBase_OperatingSystem.h,
+	cmpiOSBase_OperatingSystemProvider.c, makefile, mof/Linux_Base.mof,
+	mof/Linux_BaseRegistration.mof:
+
+	implemented Indication support in provider
+	cmpiOSBase_OperatingSystemProvider for class
+	Linux_OperatingSystemIndication -> monitored property is
+	OperationalStatus
+
+2005-01-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_UnixProcess.c:
+
+	fixed segfault when checking for newline
+
+2005-01-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile:
+
+	fixed makefile to install dmilib and header file for inclusion in
+	cmpi-smbios
+
+2005-01-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_BaseBoard.c, OSBase_BaseBoard.h,
+	OSBase_Common.c, OSBase_Common.h, OSBase_ComputerSystem.c,
+	OSBase_ComputerSystem.h, README, cmpiOSBase_BaseBoard.c,
+	cmpiOSBase_BaseBoard.h, cmpiOSBase_BaseBoardProvider.c,
+	cmpiOSBase_CSBaseBoardProvider.c, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c, dmifind.h, dmiinfo.c,
+	dmiinfo.h, dmitest.c, makefile, mof/Linux_Base.mof,
+	mof/Linux_BaseRegistration.mof:
+
+	moved dmi* files from cmpi-smbios package here - contains support
+	for accessing SMBIOS data on x86 machines - needed for
+	Linux_BaseBoard class; added class Linux_BaseBoard and
+	Linux_CSBaseBoard
+
+2005-01-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c:
+
+	implemented reboot and shutdown
+
+2004-09-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OperatingSystem.c, cmpiOSBase_OperatingSystem.h,
+	cmpiOSBase_OperatingSystemProvider.c, cmpiOSBase_Processor.c,
+	cmpiOSBase_Processor.h, cmpiOSBase_ProcessorProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c:
+
+	support for property list filter on EnumInstances and GetInstance
+
+2004-09-16  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_Common.c:
+
+	fixed algorith check_parameter_const -> did not check if
+	association is responsible for incoming object path, which forced
+	unnecessary getInstance calls
+
+2004-09-16  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	fixed DefaultPageSize -> replaced usage of outdated function
+
+2004-08-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README:
+
+	updated build instructions for CMPI enabled CIMOM
+
+2004-05-17  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/createKeyFiles.sh:
+
+	return result of dnsdomainname is checked for value
+
+2004-05-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_Processor.pl:
+
+	fixed data gathering for S390; processor instances have been
+	retrieved in wrong format
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	added latest changes
+
+2004-04-14  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: makefile, test-cmpi-base.sh:
+
+	prepared test-cmpi-base.sh for user and password authentication
+	capability of testsuite; updated makefile for automated function
+	verification testing
+
+2004-04-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_Processor.c, platform.sh:
+
+	Processor provider ported to support X86_64 and GENERIC hardware
+	platform
+
+2004-03-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/: Linux_OperatingSystem.system,
+	Linux_OperatingSystem.version.sh:
+
+	fixed algorithm to test Version / ElementName value
+
+2004-03-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_OperatingSystem.c, setting.cmpi,
+	test/system/linux/Linux_OperatingSystem.system:
+
+	fixed algorithm to retrieve the OperatingSystem's Version; updated
+	path to CMPI header files in Pegasus
+
+2004-03-25  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* platform.sh:
+
+	Fixed platform.sh.
+
+2004-03-24  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile:
+
+	Added fPic to the CFLAGS in order to support PPC.
+
+2004-03-23  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* test/makefile:
+
+	Fixed screwed up makefile.
+
+2004-03-23  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* mlogsup.c, test/makefile:
+
+	Added mutex initializer.
+
+2004-03-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README, makefile, setting.cmpi, mof/makefile.cmpi,
+	mof/makefile.standalone, test/README:
+
+	prepared build process for rpm packaging
+
+2004-02-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	switched from PEGASUS_HOME to PEGASUS_ROOT environment variable
+
+2004-02-18  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* mof/makefile.standalone:
+
+	New MOF makefile for standalone processing.
+
+2004-02-18  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	[no log message]
+
+2004-02-18  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile, setting.cmpi:
+
+	Added new build type for standalone RPM packaging.
+
+2004-02-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_Common.h:
+
+	prepared C++ environment
+
+2004-02-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c, mof/Linux_Base.mof:
+
+	updated description of property CodeSet; fixed memory bug
+
+2004-01-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c, setting.cmpi:
+
+	fixed gathering of value for LanguageEdition
+
+2004-01-28  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	get CodeSet information out of ml_langinfo() now
+
+2004-01-28  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/Linux_Base.mof:
+
+	updated OperatingSystem.CodeSet definition
+
+2004-01-28  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_OperatingSystem.c:
+
+	get CodeSet informationout of nl_langinfo() now
+
+2004-01-26  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	cmpiOSBase_OperatingSystem.c, makefile, setting.cmpi,
+	mof/Linux_Base.mof:
+
+	added new properties to OperatingSystem : CodeSet, LanguageEdition,
+	DefaultPageSize
+
+2003-12-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	default set to Pegasus
+
+2003-12-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_OperatingSystem.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_OSProcessProvider.c,
+	cmpiOSBase_RunningOSProvider.c, setting.cmpi, test/makefile:
+
+	enhanced error handling; returns now human readable error messages
+
+2003-12-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_Common.c:
+
+	fixed behavior of generic assocition provider : did not validated
+	the source object before
+
+2003-12-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_ComputerSystem.h, cmpiOSBase_OperatingSystem.h,
+	cmpiOSBase_Processor.h, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_Util.h, makefile:
+
+	the util header file is offered to provider writes, who want to
+	access and use certain class / provider specific tool functions,
+	e.g. building an object path of a Linux_UnixProcess instance
+
+2003-11-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_ComputerSystem.c,
+	OSBase_OperatingSystem.c, OSBase_Processor.c, OSBase_UnixProcess.c,
+	cmpiOSBase_Common.c, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_OperatingSystem.c, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_UnixProcess.c,
+	cmpiOSBase_UnixProcessProvider.c:
+
+	enhanced error checking and handling
+
+2003-11-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_ComputerSystem.c, cmpiOSBase_OperatingSystem.c:
+
+	fixed error checking and handling
+
+2003-11-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystemProvider.c:
+
+	fiexed return code of method execCmd
+
+2003-11-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_ComputerSystem.c:
+
+	added return code check to creation of array
+
+2003-11-05  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* functiontest.sh:
+
+	removed old test script
+
+2003-11-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* semantictest_OSBaseStage1.sh,
+	semantictest_OSBaseStage2_Processor.sh:
+
+	removed old test scripts
+
+2003-11-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: cim/Linux_CSProcessor.cim, cim/Linux_ComputerSystem.cim,
+	cim/Linux_OSProcess.cim, cim/Linux_OperatingSystem.cim,
+	cim/Linux_Processor.cim, cim/Linux_RunningOS.cim,
+	cim/Linux_UnixProcess.cim, system/linux/Linux_UnixProcess.pl,
+	system/linux/Linux_UnixProcess.system:
+
+	cleaned up config files for test suite
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/README:
+
+	update to start execution of test run
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/: Linux_CSProcessor.system,
+	Linux_Processor.system:
+
+	minor changes in used system calls
+
+2003-10-15  sedgewick_de
+
+	* OSBase_UnixProcess.c:
+
+	fixed the fix
+
+2003-10-15  sedgewick_de
+
+	* setting.cmpi:
+
+	OpenWBEM support
+
+2003-10-15  sedgewick_de
+
+	* cmpiOSBase_UnixProcess.c:
+
+	Preventing segfaults when duplicating NULL strings in process
+	parameter handling
+
+2003-10-15  sedgewick_de
+
+	* OSBase_UnixProcess.c:
+
+	Preventing buffer overflows in process parameter parsing
+
+2003-10-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/Linux_BaseRegistration.mof:
+
+	fixed registration ID of Method providers (ID 5)
+
+2003-09-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README:
+
+	updated copyright date
+
+2003-09-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* INSTALL, README, setting.cmpi:
+
+	updated instructions to install cmpi-base
+
+2003-09-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: test-cmpi-base.sh, cim/Linux_OSProcess.cim:
+
+	added export for SBLIM_TESTSUITE_RUN; added volatile class type
+
+2003-09-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_Common.h, OSBase_ComputerSystem.c,
+	OSBase_ComputerSystem.h, OSBase_OperatingSystem.c,
+	OSBase_OperatingSystem.h, OSBase_Processor.c, OSBase_Processor.h,
+	OSBase_UnixProcess.c, OSBase_UnixProcess.h,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c, functiontest.sh,
+	semantictest_OSBaseStage1.sh,
+	semantictest_OSBaseStage2_Processor.sh, sysman.h,
+	mof/Linux_Base.mof, mof/Linux_BaseRegistration.mof:
+
+	updated Copyright statement
+
+2003-09-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_OperatingSystem.c, OSBase_Processor.c,
+	OSBase_UnixProcess.c, cmpiOSBase_ProcessorProvider.c,
+	cmpiOSBase_UnixProcessProvider.c, makefile, mof/Linux_Base.mof,
+	mof/Linux_BaseRegistration.mof:
+
+	fixed memory leaks; added namespace pragma to schema
+
+2003-08-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Processor.c:
+
+	fixed failing when user has no permission to read in /proc
+
+2003-08-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_OperatingSystem.c:
+
+	fixed wrong type conversions
+
+2003-08-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* DEBUG, OSBase_Common.c, OSBase_Common.h, OSBase_ComputerSystem.c,
+	OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	OSBase_Processor.c, OSBase_UnixProcess.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_ComputerSystem.c, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c, cmpiOSBase_Processor.c,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcessProvider.c,
+	makefile:
+
+	implemented Trace Support; can be enabled by setting environment
+	variable SBLIM_TRACE; tracing to log file by setting
+	SBLIM_TRACE_FILE; fixed memory bug in local datetime; performance
+	optimization of getting timezone value
+
+2003-08-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Processor.c:
+
+	fixed platform dependent and multi-processor behavior of
+	Linux_Processor provider
+
+2003-07-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile:
+
+	fixed comment
+
+2003-07-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_ComputerSystem.c, cmpiOSBase_Common.c,
+	cmpiOSBase_ComputerSystem.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_UnixProcess.c, makefile:
+
+	switched from direct access to CIM_HOST_NAME / CIM_OS_NAME to
+	access method get_system_name() / get_os_name()
+
+2003-07-30  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c:
+
+	fixed problem occuring under Pegasus within _cat_timezone funtion
+
+2003-07-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, OSBase_UnixProcess.c:
+
+	fixed minor memory leaks
+
+2003-07-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/: Linux_ComputerSystem.system,
+	Linux_OperatingSystem.system, Linux_Processor.system,
+	Linux_UnixProcess.system:
+
+	fixed property names of State to be CIM Model conform
+
+2003-07-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_OperatingSystem.c:
+
+	fixed type mismatch for PctTotalCPUTime
+
+2003-07-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	Pegasus flavour
+
+2003-07-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.c, cmpiOSBase_Common.c,
+	cmpiOSBase_ComputerSystem.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_UnixProcess.c, setting.cmpi:
+
+	fixed bug in calculation for the time zone
+
+2003-07-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile, setting.cmpi:
+
+	more userfriendly check for Installation environment
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_ComputerSystem.c, OSBase_Processor.c, OSBase_Processor.h,
+	OSBase_UnixProcess.c, OSBase_UnixProcess.h,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_OSProcessProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h:
+
+	added authors to the headers
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	check for PEGASUS_HOME now done by makefile
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile:
+
+	check for PEGASUS_HOME now
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_ComputerSystem.c, cmpiOSBase_ComputerSystem.h,
+	cmpiOSBase_ComputerSystemProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_UnixProcess.c,
+	cmpiOSBase_UnixProcess.h, cmpiOSBase_UnixProcessProvider.c:
+
+	renamed _makeInst and _makePath to unique function names
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_Common.h, OSBase_ComputerSystem.c,
+	OSBase_OperatingSystem.c, OSBase_Processor.c, OSBase_UnixProcess.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystemProvider.c, cmpiOSBase_Processor.c,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcessProvider.c,
+	makefile:
+
+	restructured make process; moved _debug declaration to
+	OSBase_Common code
+
+2003-07-01  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystemProvider.c, makefile:
+
+	Merged ComputerSystem with ComputerSystemProvider.  Added true,
+	false and _debug to cmpiOSBase_Common.
+
+2003-06-30  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_Common.c, setting.cmpi:
+
+	check of system key values extended to check for OSName and CSName
+
+2003-06-17  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile, setting.cmpi, mof/Linux_BaseRegistration.mof:
+
+	fixed bugs in provider registration for Pegasus
+
+2003-06-17  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimBase.c, OSBase_Common.c, OSBase_Common.h,
+	OSBase_ComputerSystem.c, OSBase_ComputerSystem.h,
+	OSBase_OperatingSystem.c, OSBase_OperatingSystem.h,
+	OSBase_Processor.c, OSBase_Processor.h, OSBase_UnixProcess.c,
+	OSBase_UnixProcess.h, cimibase.h, cmpiLinux_CSProcessor.c,
+	cmpiLinux_ComputerSystem.c, cmpiLinux_OSProcess.c,
+	cmpiLinux_OperatingSystem.c, cmpiLinux_Processor.c,
+	cmpiLinux_RunningOS.c, cmpiLinux_UnixProcess.c,
+	cmpiOSBase_CSProcessorProvider.c, cmpiOSBase_Common.c,
+	cmpiOSBase_Common.h, cmpiOSBase_ComputerSystem.c,
+	cmpiOSBase_ComputerSystem.h, cmpiOSBase_ComputerSystemProvider.c,
+	cmpiOSBase_OSProcessProvider.c, cmpiOSBase_OperatingSystem.c,
+	cmpiOSBase_OperatingSystem.h, cmpiOSBase_OperatingSystemProvider.c,
+	cmpiOSBase_Processor.c, cmpiOSBase_Processor.h,
+	cmpiOSBase_ProcessorProvider.c, cmpiOSBase_RunningOSProvider.c,
+	cmpiOSBase_UnixProcess.c, cmpiOSBase_UnixProcess.h,
+	cmpiOSBase_UnixProcessProvider.c, cmpiprovsup.c, cmpiprovsup.h,
+	makefile, setting.cmpi, mof/Linux_Base.mof,
+	mof/Linux_BaseRegistration.mof:
+
+	restructured files and contents; each provider consists now of 3
+	modules; one contains the CMPI provider interfaces, one factory
+	functionality and all functions related to the CIM model and one
+	module containing the resource access functionality; the two common
+	modules can be distinguished in the same manner
+
+2003-05-16  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile, setting.cmpi:
+
+	Changed makefile targets to support Pegasus.
+
+2003-05-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: makefile, system/linux/Linux_CSProcessor.system,
+	system/linux/Linux_OSProcess.system,
+	system/linux/Linux_RunningOS.system:
+
+	added input files for consistence test of association OSProcess and
+	CSProcessor
+
+2003-05-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_RunningOS.system:
+
+	initial input file for association specific consistence test
+
+2003-05-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/makefile:
+
+	fixed script names to uninstall
+
+2003-05-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: makefile, system/linux/Linux_ComputerSystem.system,
+	system/linux/Linux_OperatingSystem.system,
+	system/linux/Linux_Processor.pl, system/linux/Linux_Processor.sh,
+	system/linux/Linux_Processor.system,
+	system/linux/Linux_UnixProcess.pl,
+	system/linux/Linux_UnixProcess.sh,
+	system/linux/Linux_UnixProcess.system:
+
+	changes in syntax of input files; switched from shell scripts to
+	perl scripts to collect instance specific data
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: makefile, system/linux/Linux_Processor.sh,
+	system/linux/Linux_Processor.system:
+
+	input files for consistence test of Linux_Processor
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README:
+
+	CIM schema version changed from 2.7.1 (preliminary) to 2.7 (final)
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: README, makefile, test-cmpi-base.sh,
+	cim/Linux_CSProcessor.cim, cim/Linux_ComputerSystem.cim,
+	cim/Linux_OSProcess.cim, cim/Linux_OperatingSystem.cim,
+	cim/Linux_Processor.cim, cim/Linux_RunningOS.cim,
+	cim/Linux_UnixProcess.cim,
+	system/linux/Linux_ComputerSystem.system,
+	system/linux/Linux_OperatingSystem.system,
+	system/linux/Linux_UnixProcess.sh,
+	system/linux/Linux_UnixProcess.system,
+	system/linux/createKeyFiles.sh:
+
+	added dir test; contains the scripts and input files to perform
+	tests via the SBLIM Test Suite (CVS package testsuite)
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpic.sh:
+
+	moved script for generating CMPI provider skeletons to package
+	sblim-psg
+
+2003-05-05  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_CSProcessor.c, cmpiLinux_OSProcess.c,
+	cmpiLinux_RunningOS.c, cmpiprovsup.c, cmpiprovsup.h:
+
+	_assoc_get_inst() checks existence of references; input parameters
+	changed
+
+2003-04-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimBase.c, platform.sh:
+
+	enabled Linux on PPC
+
+2003-04-25  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* platform.sh:
+
+	script to get current platform
+
+2003-04-25  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimBase.c, cimibase.h, cmpiLinux_ComputerSystem.c,
+	cmpiLinux_OperatingSystem.c, cmpiLinux_Processor.c,
+	cmpiLinux_UnixProcess.c, makefile, setting.cmpi, mof/makefile.cmpi:
+
+	started port to zLinux (S390)
+
+2003-04-25  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpic.sh:
+
+	updated gneration of provider sceleton and fixed smaller compile
+	problems
+
+2003-04-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_ComputerSystem.c, cmpiLinux_OperatingSystem.c,
+	cmpiLinux_Processor.c, cmpiLinux_UnixProcess.c, cmpiprovsup.c,
+	cmpiprovsup.h:
+
+	getInstance checks now system key value(s)
+
+2003-04-06  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_Processor.c, cmpiLinux_UnixProcess.c, cmpic.sh,
+	cmpiprovsup.c:
+
+	fixed return code behaviour - only if an instance was not found,
+	CIM_ERR_NOT_FOUND should be returned
+
+2003-04-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* license.html:
+
+	update to version 1.0
+
+2003-03-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	abstracted path entries
+
+2003-03-26  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* setting.cmpi:
+
+	Updated setting.cmpi to support Pegasus
+
+2003-03-25  Adrian Schuur <schuur@de.ibm.com>
+
+	* cimibase.h:
+
+	Added __cplusplus enablement
+
+2003-03-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_CSProcessor.c, cmpiLinux_ComputerSystem.c,
+	cmpiLinux_OSProcess.c, cmpiLinux_OperatingSystem.c,
+	cmpiLinux_Processor.c, cmpiLinux_RunningOS.c,
+	cmpiLinux_UnixProcess.c, cmpic.sh, cmpiprovsup.c:
+
+	fixed parameter order of CMNewObjectPath
+
+2003-03-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/Linux_Base.mof:
+
+	fixed missing Association Qualifier
+
+2003-03-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimBase.c, INSTALL, README, cimibase.h, cmpiLinux_CSProcessor.c,
+	cmpiLinux_ComputerSystem.c, cmpiLinux_OSProcess.c,
+	cmpiLinux_OperatingSystem.c, cmpiLinux_Processor.c,
+	cmpiLinux_RunningOS.c, cmpiLinux_UnixProcess.c, cmpic.sh,
+	cmpiprovsup.c, cmpiprovsup.h, functiontest.sh, makefile, mlogsup.c,
+	mlogsup.h, semantictest_OSBaseStage1.sh,
+	semantictest_OSBaseStage2_Processor.sh, setting.cmpi, sysman.h,
+	sysman_pid.c, mof/Linux_Base.mof, mof/Linux_BaseRegistration.mof,
+	mof/makefile.cmpi, mof/makefile.pegasus:
+
+	Initial revision
+
+2003-03-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimBase.c, INSTALL, README, cimibase.h, cmpiLinux_CSProcessor.c,
+	cmpiLinux_ComputerSystem.c, cmpiLinux_OSProcess.c,
+	cmpiLinux_OperatingSystem.c, cmpiLinux_Processor.c,
+	cmpiLinux_RunningOS.c, cmpiLinux_UnixProcess.c, cmpic.sh,
+	cmpiprovsup.c, cmpiprovsup.h, functiontest.sh, makefile, mlogsup.c,
+	mlogsup.h, semantictest_OSBaseStage1.sh,
+	semantictest_OSBaseStage2_Processor.sh, setting.cmpi, sysman.h,
+	sysman_pid.c, mof/Linux_Base.mof, mof/Linux_BaseRegistration.mof,
+	mof/makefile.cmpi, mof/makefile.pegasus:
+
+	SBLIM Base Package with CMPI style provider implementations;
+	instrumented classes are ComputerSystem, OperatingSystem,
+	UnixProcess, Processor and associations RunningOS, OSProcess,
+	CSProcessor
+

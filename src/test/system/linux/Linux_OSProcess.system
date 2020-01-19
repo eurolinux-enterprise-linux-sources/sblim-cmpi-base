@@ -1,0 +1,7 @@
+********************************************************************************
+association : Linux_OSProcess
+volatile
+
+--------------------------------------------------------------------------------
+Linux_OperatingSystem : -target Linux_UnixProcess -eq -cmd ps --no-headers -eo pid | wc -l
+Linux_UnixProcess : -target Linux_OperatingSystem -eq 1
