@@ -1,6 +1,6 @@
 Name:           sblim-cmpi-base
 Version:        1.6.2
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        SBLIM CMPI Base Providers
 
 Group:          Applications/System
@@ -17,6 +17,8 @@ Patch4:         sblim-cmpi-base-1.6.2-max-cpu-frequency.patch
 Patch5:         sblim-cmpi-base-1.6.2-wrong-UserModeTime-and-KernelModeTime.patch
 # Patch6: use Pegasus root/interop instead of root/PG_Interop
 Patch6:         sblim-cmpi-base-1.6.2-pegasus-interop.patch
+# Patch7: fix provider registration script to work correctly with systemd, rhbz#1179887
+Patch7:         sblim-cmpi-base-1.6.2-prov-reg-sfcb-systemd.patch
 Requires:       cim-server sblim-indication_helper
 BuildRequires:  sblim-cmpi-devel sblim-indication_helper-devel
 
@@ -56,6 +58,7 @@ Testcase Files for the SBLIM Testsuite.
 %patch4 -p1 -b .cpu-freq
 %patch5 -p1 -b .wrong-UserModeTime-and-KernelModeTime
 %patch6 -p1 -b .pegasus-interop
+%patch7 -p1 -b .prov-reg-sfcb-systemd
 
 %build
 %configure TESTSUITEDIR=%{_datadir}/sblim-testsuite --disable-static
@@ -185,6 +188,10 @@ fi
 %postun -p /sbin/ldconfig
 
 %changelog
+* Thu Apr 07 2016 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.6.2-8
+- Fix provider registration fails to restore daemon to 'running' state
+  Resolves: #1179887
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 1.6.2-7
 - Mass rebuild 2014-01-24
 
